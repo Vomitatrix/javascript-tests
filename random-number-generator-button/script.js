@@ -16,5 +16,11 @@ function generateNumber() {
 
 function changeRange() {
     numberRange = prompt('What do you want to change the range to?');
+
+    if (!(numberRange >= 1) || (numberRange = NaN)) {
+        alert('The number must be 1 or more.');
+        numberRange = 1;
+    }
+    
     numberRangeDisplay.textContent = numberRange;
 }
