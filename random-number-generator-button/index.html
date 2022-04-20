@@ -12,13 +12,24 @@
         }
         button {
             font-size: 25px;
+            width: fit-content;
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
         }
     </style>
     <title>Random Number Generator Button</title>
 </head>
 <body>
-    <button>RANDOM NUMBER</button>
-    <p>The random number is: <span></span></p>
+    <div>
+        <button id="buttonGenerator">GENERATE RANDOM NUMBER</button>
+        <button id="buttonRangeChange">CHANGE RANGE</button>
+    </div>
+    <p>Numbers from 1 to <span id="numberRange">10</span></p>
+    <p>The random number is: <span id="generatedNumber"></span></p>
     <script src="script.js"></script>
 </body>
 </html>
