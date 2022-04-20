@@ -1,0 +1,1 @@
+# A simple program that calculates US income tax based on user input.
