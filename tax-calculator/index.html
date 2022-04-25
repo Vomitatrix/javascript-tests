@@ -11,9 +11,27 @@
     <h1>TAX CALCULATOR</h1>
     <button>INPUT INCOME</button>
     <h2>US Single Person Filing</h2>
-    <p>Yearly income: $<span id="yearlyIncome"></span></p>
-    <p>Tax due: $<span id="taxDue"></span></p>
-    <p>After taxes: $<span id="netIncome"></span></p>
+    <div>
+        <h3>Before taxes:</h3>
+        <p>Yearly: $<span id="grossYearly"></span></p>
+        <p>Monthly: $<span id="grossMonthly"></span></p>
+        <p>Biweekly: $<span id="grossBiweekly"></span></p>
+        <p>Weekly: $<span id="grossWeekly"></span></p>
+        <p>Daily: $<span id="grossDaily"></span></p>
+        <p>Hourly: $<span id="grossHourly"></span></p>
+    </div>
+    <div>
+        <h3>After taxes:</h3>
+        <p>Yearly:$<span id="netYearly"></span></p>
+        <p>Monthly: $<span id="netMonthly"></span></p>
+        <p>Biweekly: $<span id="netBiweekly"></span></p>
+        <p>Weekly: $<span id="netWeekly"></span></p>
+        <p>Daily: $<span id="netDaily"></span></p>
+        <p>Hourly: $<span id="netHourly"></span></p>
+    </div>
+    <div>
+        <h3>Tax due: $<span id="taxDue"></span></h3>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
