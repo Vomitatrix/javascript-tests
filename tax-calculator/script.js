@@ -1,14 +1,11 @@
 const incomeButton = document.querySelector('button');
-
 const taxDueDisplay = document.getElementById('taxDue');
-
 const grossYearlyDisplay = document.getElementById('grossYearly');
 const grossMonthlyDisplay = document.getElementById('grossMonthly');
 const grossBiweeklyDisplay = document.getElementById('grossBiweekly');
 const grossWeeklyDisplay = document.getElementById('grossWeekly');
 const grossDailyDisplay = document.getElementById('grossDaily');
 const grossHourlyDisplay = document.getElementById('grossHourly');
-
 const netYearlyDisplay = document.getElementById('netYearly');
 const netMonthlyDisplay = document.getElementById('netMonthly');
 const netBiweeklyDisplay = document.getElementById('netBiweekly');
@@ -24,7 +21,6 @@ const TAX32 = 49335.5;
 const TAX35 = 162718;
 
 let taxDue;
-
 let grossYearly;
 let grossMonthly;
 let grossBiweekly;
@@ -73,14 +69,12 @@ function calculateTax() {
     netBiweekly = netWeekly * 2;
 
     taxDueDisplay.textContent = Number(taxDue).toLocaleString('en-US');
-
     grossYearlyDisplay.textContent = Number(grossYearly).toLocaleString('en-US');
     grossMonthlyDisplay.textContent = Number(grossMonthly).toLocaleString('en-US');
     grossBiweeklyDisplay.textContent = Number(grossBiweekly).toLocaleString('en-US');
     grossWeeklyDisplay.textContent = Number(grossWeekly).toLocaleString('en-US');
     grossDailyDisplay.textContent = Number(grossDaily).toLocaleString('en-US');
     grossHourlyDisplay.textContent = Number(grossHourly).toLocaleString('en-US');
-
     netYearlyDisplay.textContent = Number(netYearly).toLocaleString('en-US');
     netMonthlyDisplay.textContent = Number(netMonthly).toLocaleString('en-US');
     netBiweeklyDisplay.textContent = Number(netBiweekly).toLocaleString('en-US');
