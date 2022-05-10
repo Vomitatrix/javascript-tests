@@ -1,6 +1,5 @@
 const incomeHourlyInput = document.getElementById('incomeHourlyInput');
 const incomeYearlyInput = document.getElementById('incomeYearlyInput');
-const button = document.querySelector('button');
 const taxDueDisplay = document.getElementById('taxDue');
 const grossYearlyDisplay = document.getElementById('grossYearly');
 const grossMonthlyDisplay = document.getElementById('grossMonthly');
@@ -36,7 +35,8 @@ let netWeekly;
 let netDaily;
 let netHourly;
 
-button.addEventListener('click', calculateTax);
+incomeHourlyInput.addEventListener('keyup', calculateTax);
+incomeYearlyInput.addEventListener('keyup', calculateTax);
 
 function calculateTax() {
     grossYearly = getIncome();
@@ -86,10 +86,8 @@ function calculateTax() {
 }
 
 function getIncome() {
-    let hourlyToYearly;
-
     if (incomeHourlyInput.value != ''){
-        hourlyToYearly = incomeHourlyInput.value * 2080;
+        let hourlyToYearly = incomeHourlyInput.value * 2080;
         return hourlyToYearly;
     } else {
         return incomeYearlyInput.value;
