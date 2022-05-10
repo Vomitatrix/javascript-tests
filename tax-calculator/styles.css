@@ -4,10 +4,19 @@
     gap: 15px;
 }
 
+#gross-net-div {
+    display: flex;
+    justify-content: space-between;
+}
+
 input {
     max-width: max-content;
 }
 
 button {
     max-width: max-content;
+}
+
+body {
+    max-width: fit-content;
 }
