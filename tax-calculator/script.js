@@ -1,4 +1,6 @@
-const incomeButton = document.querySelector('button');
+const incomeHourlyInput = document.getElementById('incomeHourlyInput');
+const incomeYearlyInput = document.getElementById('incomeYearlyInput');
+const button = document.querySelector('button');
 const taxDueDisplay = document.getElementById('taxDue');
 const grossYearlyDisplay = document.getElementById('grossYearly');
 const grossMonthlyDisplay = document.getElementById('grossMonthly');
@@ -34,10 +36,10 @@ let netWeekly;
 let netDaily;
 let netHourly;
 
-incomeButton.addEventListener('click', calculateTax);
+button.addEventListener('click', calculateTax);
 
 function calculateTax() {
-    grossYearly = prompt('Input gross yearly income:');
+    grossYearly = getIncome();
 
     if (grossYearly > 539900) {
         taxDue = ((grossYearly - 539900)*0.37) + TAX35;
@@ -81,4 +83,15 @@ function calculateTax() {
     netWeeklyDisplay.textContent = Number(netWeekly).toLocaleString('en-US');
     netDailyDisplay.textContent = Number(netDaily).toLocaleString('en-US');
     netHourlyDisplay.textContent = Number(netHourly).toLocaleString('en-US');
+}
+
+function getIncome() {
+    let hourlyToYearly;
+
+    if (incomeHourlyInput.value != ''){
+        hourlyToYearly = incomeHourlyInput.value * 2080;
+        return hourlyToYearly;
+    } else {
+        return incomeYearlyInput.value;
+    }
 }

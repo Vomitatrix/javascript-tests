@@ -9,25 +9,31 @@
 </head>
 <body>
     <h1>TAX CALCULATOR</h1>
-    <button>INPUT INCOME</button>
+    <div id="input-div">
+        <input placeholder="Hourly income" id="incomeHourlyInput">
+        <input placeholder="Annual income" id="incomeYearlyInput">
+        <button>CALCULATE TAXES</button>
+    </div>
     <h2>US Single Person Filing</h2>
     <div>
-        <h3>Before taxes:</h3>
-        <p>Yearly: $<span id="grossYearly"></span></p>
-        <p>Monthly: $<span id="grossMonthly"></span></p>
-        <p>Biweekly: $<span id="grossBiweekly"></span></p>
-        <p>Weekly: $<span id="grossWeekly"></span></p>
-        <p>Daily: $<span id="grossDaily"></span></p>
-        <p>Hourly: $<span id="grossHourly"></span></p>
-    </div>
-    <div>
-        <h3>After taxes:</h3>
-        <p>Yearly:$<span id="netYearly"></span></p>
-        <p>Monthly: $<span id="netMonthly"></span></p>
-        <p>Biweekly: $<span id="netBiweekly"></span></p>
-        <p>Weekly: $<span id="netWeekly"></span></p>
-        <p>Daily: $<span id="netDaily"></span></p>
-        <p>Hourly: $<span id="netHourly"></span></p>
+        <div> <!--Before taxes div-->
+            <h3>Before taxes:</h3>
+            <p>Yearly: $<span id="grossYearly"></span></p>
+            <p>Monthly: $<span id="grossMonthly"></span></p>
+            <p>Biweekly: $<span id="grossBiweekly"></span></p>
+            <p>Weekly: $<span id="grossWeekly"></span></p>
+            <p>Daily: $<span id="grossDaily"></span></p>
+            <p>Hourly: $<span id="grossHourly"></span></p>
+        </div>
+        <div> <!--After taxes div-->
+            <h3>After taxes:</h3>
+            <p>Yearly:$<span id="netYearly"></span></p>
+            <p>Monthly: $<span id="netMonthly"></span></p>
+            <p>Biweekly: $<span id="netBiweekly"></span></p>
+            <p>Weekly: $<span id="netWeekly"></span></p>
+            <p>Daily: $<span id="netDaily"></span></p>
+            <p>Hourly: $<span id="netHourly"></span></p>
+        </div>
     </div>
     <div>
         <h3>Tax due: $<span id="taxDue"></span></h3>

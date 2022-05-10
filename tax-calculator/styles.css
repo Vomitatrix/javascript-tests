@@ -1,0 +1,13 @@
+#input-div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input {
+    max-width: max-content;
+}
+
+button {
+    max-width: max-content;
+}
